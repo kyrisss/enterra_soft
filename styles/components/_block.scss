@@ -1,0 +1,41 @@
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  color: #000;
+  background-color: aqua;
+  position: absolute;
+
+  &__left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &__right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__bounce {
+    animation: bounce 5s linear infinite normal running 0s none;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 50%;
+  }
+  20% {
+    top: 10%;
+  }
+  80% {
+    top: 90%;
+  }
+  100% {
+    top: 50%;
+  }
+}

@@ -3,6 +3,9 @@
 @import "./variables/colors";
 
 @import "./components/loader";
+@import "./components/button";
+@import "./components/block";
+@import "./components/ball";
 
 @import "./views/mainPage";
 
@@ -46,7 +49,6 @@ input:focus {
 }
 
 .wrapper {
-  max-width: 1000px;
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;

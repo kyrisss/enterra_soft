@@ -1,0 +1,15 @@
+.button {
+  display: block;
+  width: 200px;
+  padding: 20px;
+  color: #fff;
+  background-color: #000;
+  text-transform: uppercase;
+  border-radius: 40px;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #aaa;
+    cursor: default;
+  }
+}
