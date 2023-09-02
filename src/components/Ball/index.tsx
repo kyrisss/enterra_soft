@@ -4,4 +4,4 @@ interface BallProps {
   className?: string;
 }
 
-export const Ball: FC<BallProps> = ({ className }) => <div className={`ball ${className}`}></div>;
+export const Ball: FC<BallProps> = ({ className = "" }) => <div className={`ball ${className}`}></div>;

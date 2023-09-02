@@ -18,7 +18,6 @@ export const TimerButton: FC<TimerButtonProps> = ({ onStart, onEnd }) => {
   };
 
   const onClickHandler = () => {
-    console.log({ enabled, timer });
     toggleTimer();
     onStart && onStart();
   };

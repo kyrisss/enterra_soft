@@ -6,23 +6,22 @@
   height: 100px;
   color: #000;
   background-color: aqua;
+  font-size: 30px;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
   &__left {
-    top: 50%;
     left: 0;
-    transform: translateY(-50%);
   }
 
   &__right {
-    top: 50%;
     right: 0;
-    transform: translateY(-50%);
   }
+}
 
-  &__bounce {
-    animation: bounce 5s linear infinite normal running 0s none;
-  }
+.bounce {
+  animation: bounce 5s linear infinite normal running 0s none;
 }
 
 @keyframes bounce {

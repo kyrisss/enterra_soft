@@ -13,12 +13,14 @@ export const MainPage = () => {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", width: "100%", height: "80vh", position: "relative" }}>
-        <Block text={String(1)} className="block__bounce block__left" />
-        <Ball className={`ball__bounce ${strike ? "ball__strike" : ""}`} />
-        <Block text={String(2)} className="block block__right" />
+      <div className="field">
+        <Block text={String(1)} className="bounce block__left" />
+        <div className="block-container">
+          <Ball className={`bounce ${strike ? "strike" : ""}`} />
+          <Block text={String(2)} className="block__right" />
+        </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div className="timer-container">
         <TimerButton onStart={toggleStrike} onEnd={toggleStrike} />
       </div>
     </div>

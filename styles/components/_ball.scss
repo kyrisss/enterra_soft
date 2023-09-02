@@ -4,36 +4,32 @@
   height: 0px;
   top: 50%;
   left: 0;
+  z-index: 2;
   background-color: transparent;
   border-radius: 50%;
-  transform: translateY(-50%);
+  transform: translate(50px, -50%);
+  background-color: aquamarine;
 
-  &__bounce {
-    animation: bounce 5s linear infinite normal running 0s none;
-  }
-
-  &__strike {
-    background-color: aquamarine;
-    animation: strike 3s linear 1 normal running 0s none;
+  &.strike {
+    position: absolute;
+    animation:
+      bounce 5s linear infinite normal paused 0s none,
+      strike 3s linear 1 normal running 0s none;
   }
 }
 
 @keyframes strike {
-  0% {
+  3% {
     left: 0;
     width: 50px;
     height: 50px;
   }
-  99% {
-    left: 97%;
+  95% {
     width: 50px;
     height: 50px;
-    transform: translateY(-50%);
   }
   100% {
-    left: 97%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0px;
+    left: calc(95% - 50px);
+    top: 50%;
   }
 }
